@@ -1,0 +1,36 @@
+<div class="container">
+
+  <!-- String Interpolation -->
+  <!-- String interpolation allows you to bind component properties to the view by embedding expressions within double
+    curly braces {{ }}-->
+  <h4>{{ title }}</h4>
+
+  <!-- Property Binding  : An image will be displayed from the specified URL -->
+  <!-- Property binding allows you to bind component data to the properties of HTML elements or directives.
+    You enclose the property name in square brackets []-->
+  <img [src]="imageUrl" alt="Example Image" />
+
+  <br />
+  <br />
+
+  <p [class.my-class-1]="isWarning">This is a warning text</p> <!--Text color is red-->
+
+  <br />
+
+
+  <!-- Event Binding : An alert box will appear with the message “Button clicked!” when the button is clicked.-->
+  <!-- Event binding enables you to listen for events from the DOM (like clicks or keyboard events) and execute component methods in response.
+   Use parentheses () to enclose the event name-->
+  <button (click)="onClick($event)" class="btn btn-primary ">Click Me</button>
+
+  <br />
+  <br />
+
+  <!-- Two-Way Data Binding -->
+  <!-- Two-way data binding allows for bidirectional synchronization between the component and the view, commonly used with form controls. 
+    It is achieved using the [(ngModel)] syntax.-->
+  <input [(ngModel)]="userName" type="text" />
+  <p>Your username is: {{ userName }}</p>
+
+
+</div>
